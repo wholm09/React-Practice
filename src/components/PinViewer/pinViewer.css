@@ -1,0 +1,20 @@
+/* set ul has display flex horizontal */
+.pinViewer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* set ul li has hidden dot */
+.pinViewer ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

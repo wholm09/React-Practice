@@ -1,15 +1,9 @@
-import { useState } from 'react';
-import PinItem from './components/PinItem';
+import PinViewer from './components/PinViewer';
 import Keyboard from './components/Keyboard';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [pins] = useState([
-    { id: '1', value: 1 },
-    { id: '2', value: 2 }
-  ]);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -26,15 +20,7 @@ function App() {
           Learn React
         </a>
 
-        {/* Keyboard */}
-        <div>
-          { pins.map(pin =>
-            <PinItem
-              value={ pin.value }
-              key={ pin.id }
-            ></PinItem>
-          )}
-        </div>
+        <PinViewer></PinViewer>
         <Keyboard></Keyboard>
       </header>
     </div>

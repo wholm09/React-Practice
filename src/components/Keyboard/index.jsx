@@ -1,3 +1,5 @@
+import './keyboard.css';
+
 function Keyboard() {
   return (
     <div>
