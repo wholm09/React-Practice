@@ -1,4 +1,4 @@
-import './pinViewer.css';
+import './PinViewer.css';
 
 function PinItem({ value }) {
   return (

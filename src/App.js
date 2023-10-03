@@ -1,5 +1,7 @@
-import PinViewer from './components/PinViewer';
+import PinViewer from './components/PinViewer/PinViewer';
 import Keyboard from './components/Keyboard';
+import ExpenseItem from './components/Expense/ExpenseItem';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,10 +21,15 @@ function App() {
         >
           Learn React
         </a>
-
+      </header>
+      <main>
         <PinViewer></PinViewer>
         <Keyboard></Keyboard>
-      </header>
+        <div>
+          Expense Tracker
+        </div>
+        <ExpenseItem></ExpenseItem>
+      </main>
     </div>
   );
 }

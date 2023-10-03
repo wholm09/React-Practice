@@ -1,0 +1,14 @@
+OTP PIN Feature
+1. PinViewer
+2. Keyboard On-Screen
+3. Negative Flow
+  a. errorMessage below the PinViewer
+  b. BottomSheet below
+4. Proven working on all top 3 browsers
+5. SetPin Page
+6. OTP Page
+7. PIN Payment Page
+
+[2023-09-23] Expense List
+1. React JSX Complex Component
+2. 
