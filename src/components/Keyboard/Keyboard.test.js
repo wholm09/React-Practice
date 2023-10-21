@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import Keyboard from './index';
+import Keyboard from './Keyboard';
 
-test('renders table', () => {
+test('renders the table', () => {
   render(<Keyboard />);
 
   // render table check

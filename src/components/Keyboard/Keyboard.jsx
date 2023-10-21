@@ -1,4 +1,4 @@
-import './keyboard.css';
+import './Keyboard.css';
 
 function Keyboard() {
   return (
@@ -6,9 +6,9 @@ function Keyboard() {
       <table>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <button onClick="handleClick('1')">1</button>
+            <button onClick="handleClick('2')">2</button>
+            <button onClick="handleClick('3')">3</button>
           </tr>
           <tr>
             <td>4</td>
