@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.givePointer li {
+  cursor: pointer;
+}
+
+.emptySection {
+  height: 250px;
+  background-color: black;
+}

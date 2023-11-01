@@ -4,18 +4,16 @@ import PinViewer from './components/PinViewer/PinViewer';
 import Keyboard from './components/Keyboard/Keyboard';
 import ExpenseItem from './components/Expense/ExpenseItem';
 
-// import ScrollToTarget from './components/ScrollToTarget/ScrollToTarget';
+import scrollToTarget from './components/ScrollToTarget/ScrollToTarget.jsx';
 
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const targetRef = useRef();
-
-  function scrollToTarget() {
-    // Scroll to the top of the target element
-    targetRef.current.scrollIntoView({ behavior: 'smooth' });
-  }
+  const KeyboardAndPinsRef= useRef();
+  const LotToProfitRef = useRef();
+  const EmptySectionRef= useRef();
+  const ExpenseItemRef= useRef();
 
   return (
     <div className="App">
@@ -33,21 +31,30 @@ function App() {
           Learn React
         </a>
         <div>OR</div>
-        <ul>
-          <li>&#9203; Testing PIN and Keyboard</li>
+        <ul className="givePointer">
+          <li>&#9203;
+            <span onClick={() => scrollToTarget(ExpenseItemRef)}>Testing PIN and Keyboard</span></li>
           <li>
-            <button onClick={scrollToTarget}>Expense Items</button>
+            <span onClick={()=> scrollToTarget(KeyboardAndPinsRef)}>Expense Items</span>
           </li>
           <li>&#9203; Calculation - "Lot to Profit"</li>
-          <li>&#9203; Blog - How harmful is it "Online Trading"?</li>
+          <li>&#9203; Blog - How harmful is it "Online Gambling"?</li>
         </ul>
-        {/* TODO: connect to LD toggle to switch to route */}
       </header>
       <main>
-        <PinViewer pins="123"></PinViewer>
-        <Keyboard></Keyboard>
-        <div ref={targetRef}>Expense Tracker</div>
-        <ExpenseItem></ExpenseItem>
+        <div ref={KeyboardAndPinsRef}>
+          <PinViewer pins="123"></PinViewer>
+          <Keyboard></Keyboard>
+        </div>
+        <div ref={EmptySectionRef} className="emptySection"/>
+        <div ref={LotToProfitRef}>
+          <span>Lot To Protif Calculator</span>
+          {/* LotToProfit Calc */}
+        </div>
+        <div ref={ExpenseItemRef}>
+          <span>Expense Tracker</span>
+          <ExpenseItem></ExpenseItem>
+        </div>
       </main>
     </div>
   );

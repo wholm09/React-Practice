@@ -6,9 +6,9 @@ function Keyboard() {
       <table>
         <tbody>
           <tr>
-            <button onClick="handleClick('1')">1</button>
-            <button onClick="handleClick('2')">2</button>
-            <button onClick="handleClick('3')">3</button>
+            <div onClick="handleClick('1')">1</div>
+            <div onClick="handleClick('2')">2</div>
+            <div onClick="handleClick('3')">3</div>
           </tr>
           <tr>
             <td>4</td>
