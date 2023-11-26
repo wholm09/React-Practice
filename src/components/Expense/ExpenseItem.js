@@ -1,24 +1,18 @@
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
+import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
-function ExpenseItem() {
+function ExpenseItem({ date, title, price, lotAmount }) {
   return (
-    <Fragment>
-      <div className="expense-item">
-        <div>3rd October 2023</div>
-        <div className="expense-item__description">
-          <h2>Mr. Beast</h2>
-          <div className="expense-item__price">USD 100</div>
-        </div>
+    <div className="expense-item">
+      <ExpenseDate date={date} />
+      <div className="expense-item__description">
+        <h2>{title}</h2>
+        <div className="expense-item__price">{price}</div>
+        <div className="expense-item__price">{lotAmount}</div>
+        <div>{price * lotAmount}</div>
       </div>
-      <div className="expense-item">
-        <div>4th October 2023</div>
-        <div className="expense-item__description">
-          <h2>Neko Neko</h2>
-          <div className="expense-item__price">USD 125</div>
-        </div>
-      </div>
-    </Fragment>
+    </div>
   );
 }
 
